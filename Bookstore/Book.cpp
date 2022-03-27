@@ -50,7 +50,7 @@ double Book::getPrice() const { return price;}
 std::string Book::toString() const
 {
     std::ostringstream ostream;
-    ostream << getAuthor()<< ". (" << getYear() <<"). " << getTitle() << ". "
+    ostream << std::fixed << getAuthor()<< ". (" << getYear() <<"). " << getTitle() << ". "
     << getPublisher() << ". $" << std::setprecision(2) << getPrice() << ". "
     << "Count: " << getCount() << ". ISBN: " << getIsbn() << ".";
     return ostream.str();
